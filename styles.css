@@ -13,6 +13,7 @@ header {
     position: relative;
     text-align: center; /* Center the text */
 }
+
 .header-content {
     display: -webkit-box; /* Safari, iOS, Android browser */
     display: -ms-flexbox; /* IE 10 */
@@ -45,20 +46,18 @@ nav ul li a:hover {
 }
 
 header img {
-    width: 140px;
-    height: auto;
+    width: 120px;
+    height: 140px; /* Set height to match width for perfect circle */
+    border-radius: 50%; /* Create circular shape */
     position: absolute;
-    top: 20px;
+    top: 40px;
     left: 20px;
 }
 
-section {
-    padding: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+/* Add media query for mobile devices */
+@media only screen and (max-width: 600px) {
+    header img {
+        position: static; /* Change position to static to display below text */
+        margin-top: 20px; /* Add margin for spacing */
+    }
 }
